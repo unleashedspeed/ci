@@ -5,15 +5,13 @@ on:
   # Trigger the workflow on push or pull request,
   # but only for the ios-dev branch.
   push:
-    branches:
-      - main
+    branches: [ main ]
   pull_request:
-    branches:
-      - main
+    branches: [ main ]
 
 jobs:
   Test:
-    runs-on: macOS-latest
+    runs-on: macos-latest
     steps:
     - uses: actions/checkout@v3
     - name: List available Xcode versions
