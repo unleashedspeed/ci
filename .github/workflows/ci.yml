@@ -19,5 +19,5 @@ jobs:
     - name: Select Xcode
       run: sudo xcode-select -switch /Applications/Xcode.app && /usr/bin/xcodebuild -version
     - name: Run unit tests
-      run: xcodebuild test -project ci/ci.xcworkspace -scheme ci -destination 'platform=iOS Simulator,name=iPhone 13,OS=15.4' | xcpretty && exit ${PIPESTATUS[0]}
+      run: xcodebuild test -project ci.xcodeproj -scheme ci -destination 'platform=iOS Simulator,name=iPhone 13,OS=15.4' | xcpretty && exit ${PIPESTATUS[0]}
 
