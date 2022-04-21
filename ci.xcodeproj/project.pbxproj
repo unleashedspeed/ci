@@ -14,19 +14,11 @@
 		0978C7CB280DB2B200716B80 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0978C7CA280DB2B200716B80 /* Assets.xcassets */; };
 		0978C7CE280DB2B200716B80 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0978C7CC280DB2B200716B80 /* LaunchScreen.storyboard */; };
 		0978C7D9280DB2B200716B80 /* ciTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0978C7D8280DB2B200716B80 /* ciTests.swift */; };
-		0978C7E3280DB2B200716B80 /* ciUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0978C7E2280DB2B200716B80 /* ciUITests.swift */; };
-		0978C7E5280DB2B200716B80 /* ciUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0978C7E4280DB2B200716B80 /* ciUITestsLaunchTests.swift */; };
+		09CF184F28113AE800035EFE /* ci.yml in Resources */ = {isa = PBXBuildFile; fileRef = 09CF184E28113AE800035EFE /* ci.yml */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		0978C7D5280DB2B200716B80 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0978C7B6280DB2B000716B80 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 0978C7BD280DB2B000716B80;
-			remoteInfo = ci;
-		};
-		0978C7DF280DB2B200716B80 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 0978C7B6280DB2B000716B80 /* Project object */;
 			proxyType = 1;
@@ -46,9 +38,7 @@
 		0978C7CF280DB2B200716B80 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0978C7D4280DB2B200716B80 /* ciTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ciTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0978C7D8280DB2B200716B80 /* ciTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ciTests.swift; sourceTree = "<group>"; };
-		0978C7DE280DB2B200716B80 /* ciUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ciUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		0978C7E2280DB2B200716B80 /* ciUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ciUITests.swift; sourceTree = "<group>"; };
-		0978C7E4280DB2B200716B80 /* ciUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ciUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		09CF184E28113AE800035EFE /* ci.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = ci.yml; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,22 +56,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		0978C7DB280DB2B200716B80 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		0978C7B5280DB2B000716B80 = {
 			isa = PBXGroup;
 			children = (
+				09CF184C28113AE800035EFE /* .github */,
 				0978C7C0280DB2B000716B80 /* ci */,
 				0978C7D7280DB2B200716B80 /* ciTests */,
-				0978C7E1280DB2B200716B80 /* ciUITests */,
 				0978C7BF280DB2B000716B80 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -91,7 +74,6 @@
 			children = (
 				0978C7BE280DB2B000716B80 /* ci.app */,
 				0978C7D4280DB2B200716B80 /* ciTests.xctest */,
-				0978C7DE280DB2B200716B80 /* ciUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -118,13 +100,20 @@
 			path = ciTests;
 			sourceTree = "<group>";
 		};
-		0978C7E1280DB2B200716B80 /* ciUITests */ = {
+		09CF184C28113AE800035EFE /* .github */ = {
 			isa = PBXGroup;
 			children = (
-				0978C7E2280DB2B200716B80 /* ciUITests.swift */,
-				0978C7E4280DB2B200716B80 /* ciUITestsLaunchTests.swift */,
+				09CF184D28113AE800035EFE /* workflows */,
 			);
-			path = ciUITests;
+			path = .github;
+			sourceTree = "<group>";
+		};
+		09CF184D28113AE800035EFE /* workflows */ = {
+			isa = PBXGroup;
+			children = (
+				09CF184E28113AE800035EFE /* ci.yml */,
+			);
+			path = workflows;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -165,24 +154,6 @@
 			productReference = 0978C7D4280DB2B200716B80 /* ciTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		0978C7DD280DB2B200716B80 /* ciUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 0978C7EE280DB2B200716B80 /* Build configuration list for PBXNativeTarget "ciUITests" */;
-			buildPhases = (
-				0978C7DA280DB2B200716B80 /* Sources */,
-				0978C7DB280DB2B200716B80 /* Frameworks */,
-				0978C7DC280DB2B200716B80 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				0978C7E0280DB2B200716B80 /* PBXTargetDependency */,
-			);
-			name = ciUITests;
-			productName = ciUITests;
-			productReference = 0978C7DE280DB2B200716B80 /* ciUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -197,10 +168,6 @@
 						CreatedOnToolsVersion = 13.3.1;
 					};
 					0978C7D3280DB2B200716B80 = {
-						CreatedOnToolsVersion = 13.3.1;
-						TestTargetID = 0978C7BD280DB2B000716B80;
-					};
-					0978C7DD280DB2B200716B80 = {
 						CreatedOnToolsVersion = 13.3.1;
 						TestTargetID = 0978C7BD280DB2B000716B80;
 					};
@@ -221,7 +188,6 @@
 			targets = (
 				0978C7BD280DB2B000716B80 /* ci */,
 				0978C7D3280DB2B200716B80 /* ciTests */,
-				0978C7DD280DB2B200716B80 /* ciUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -233,18 +199,12 @@
 			files = (
 				0978C7CE280DB2B200716B80 /* LaunchScreen.storyboard in Resources */,
 				0978C7CB280DB2B200716B80 /* Assets.xcassets in Resources */,
+				09CF184F28113AE800035EFE /* ci.yml in Resources */,
 				0978C7C9280DB2B000716B80 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		0978C7D2280DB2B200716B80 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		0978C7DC280DB2B200716B80 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -272,15 +232,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		0978C7DA280DB2B200716B80 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0978C7E5280DB2B200716B80 /* ciUITestsLaunchTests.swift in Sources */,
-				0978C7E3280DB2B200716B80 /* ciUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -288,11 +239,6 @@
 			isa = PBXTargetDependency;
 			target = 0978C7BD280DB2B000716B80 /* ci */;
 			targetProxy = 0978C7D5280DB2B200716B80 /* PBXContainerItemProxy */;
-		};
-		0978C7E0280DB2B200716B80 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 0978C7BD280DB2B000716B80 /* ci */;
-			targetProxy = 0978C7DF280DB2B200716B80 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -526,42 +472,6 @@
 			};
 			name = Release;
 		};
-		0978C7EF280DB2B200716B80 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = S45785946Q;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = gupta.saurabh.ciUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = ci;
-			};
-			name = Debug;
-		};
-		0978C7F0280DB2B200716B80 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = S45785946Q;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = gupta.saurabh.ciUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = ci;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -588,15 +498,6 @@
 			buildConfigurations = (
 				0978C7EC280DB2B200716B80 /* Debug */,
 				0978C7ED280DB2B200716B80 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		0978C7EE280DB2B200716B80 /* Build configuration list for PBXNativeTarget "ciUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				0978C7EF280DB2B200716B80 /* Debug */,
-				0978C7F0280DB2B200716B80 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
